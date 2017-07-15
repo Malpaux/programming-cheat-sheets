@@ -5,7 +5,7 @@ They aim to provide a structured overview of the core language features and an i
 ## Cheat-sheets
 - [JavaScript (ES6)](javascript.md)
 
-## Contribution
-Any activity helping to complete these cheat-sheets is highly appreciated!
+## Contributing
+Any help towards completing these cheat-sheets is highly appreciated!
 
-If you spot any mistakes in existing cheat-sheets or can even contribute new ones (not mistakes, but sheets), feel free to get in touch or just create a pull request.
+If you spot any mistakes in existing cheat-sheets or can even contribute new ones (not mistakes, sheets), feel free to get in touch or just create a pull request.

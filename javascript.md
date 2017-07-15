@@ -560,7 +560,7 @@ console.log(arrayName3); // [2, 3, 4, 5]
 ```
 
 #### Objects
-Please note that the object rest/spread feature still is a [draft](https://github.com/tc39/proposal-object-rest-spread) and is not included in the official ES6 spec.  
+Please note that the object rest/spread feature is still a [draft](https://github.com/tc39/proposal-object-rest-spread) and is not included in the official ES6 spec.  
 Many transpilers do however already support it today.
 
 ```javascript
