@@ -3,6 +3,7 @@ These cheat-sheets are meant for everyone who can already code, but is strugglin
 They aim to provide a structured overview of the core language features and an introduction on the surrounding tooling.
 
 ## Cheat-sheets
+- [Go](golang.md)
 - [JavaScript (ES6)](javascript.md)
 
 ## Contributing
