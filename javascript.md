@@ -102,6 +102,9 @@ line */
 var variableName = 0;
 
 // Mutable binding (block-scoped)
+let variableName;
+
+// Mutable binding (block-scoped) with initialization
 let variableName = 0;
 
 // Constants/immutable binding (block-scoped)
@@ -119,10 +122,10 @@ JavaScript is dynamically typed. You cannot declare static types (although 3rd p
 - String
 - Symbol (new in ES6)
 
-For more information take a look at the [Mozilla JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures).
+For more information, take a look at the [Mozilla JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures).
 
 #### Strings
-JavaScript strings are treated like primitives.
+JavaScript's strings are treated like primitives.
 
 #### Interfaces
 JavaScript does not have interfaces.
@@ -146,7 +149,7 @@ console.log(typeof variableName === 'number'); // true
 console.log((new ClassName()) instanceof ClassName); // true
 ```
 
-For more information take a look at the [Mozilla JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof).
+For more information, take a look at the [Mozilla JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof).
 
 #### Type conversion
 JavaScript implicitly coerces types as needed.  
@@ -234,12 +237,12 @@ const value = condition ? conditionAppliesValue : conditionDoesNotApplyValue;
 #### Switch
 ```javascript
 switch (value) {
-  case comparator:
+  case comparedValue:
     // Statements go here
     break;
 
   // Use curly braces when declaring block-scoped variables in a case
-  case comparator2: {
+  case comparedValue2: {
     // Statements go here
     break;
   }
@@ -312,7 +315,7 @@ JavaScript's array are always dynamically-sized. Internally they are implemented
 ```javascript
 // Declare array
 const arrayName = [];
-const arrayName = [0, 0, 0];
+const arrayName = [0, 1, 2];
 
 // Access array value
 const value = arrayName[index];
@@ -321,7 +324,7 @@ const value = arrayName[index];
 arrayName[index] = value;
 
 // Get array length
-const length = array.length; // Important: dynamically computed (reading it is O(n))!
+const length = arrayName.length; // Important: dynamically computed (reading it is O(n))!
 
 // Array methods (examples return new arrays with identical data)
 const arrayName2 = arrayName.filter((currentValue, index, array) => true);
@@ -334,7 +337,7 @@ JavaScript does not natively have array slices.
 
 #### Generic Objects
 ```javascript
-// Declare object
+// Create new object
 const objectName = {};
 const objectName = {
   key: value,
@@ -348,6 +351,9 @@ const value = objectName['key2'];
 // Mutate object value
 objectName.key2 = value;
 objectName['key2'] = value;
+
+// Delete object property
+delete objectName.key2;
 ```
 
 #### Structs
@@ -443,7 +449,7 @@ import { namedExport, namedExport as importName } from 'module';
 import defaultExport, { namedExport } from 'module';
 import * as module from 'module';
 
-// Declare modules: Just add exports to a file and it will be usable as a module
+// Declare module: Just add exports to a file and it will be usable as a module
 
 // Export
 export default defaultExport;
@@ -454,6 +460,33 @@ export const namedExport = 0;
 export * from 'module';
 export { namedExport, namedExport as exportName, default as exportName } from 'module';
 ```
+
+### Concurrency
+JavaScript programs run in a single event loop. (Manual multi-processing is possible in node.js.)
+
+TODO: Asynchronous concept
+
+### Async/await
+Before ```async/await``` (and Promises) JavaScript suffered from something called the ["callback hell"](http://callbackhell.com/) (big time!).  
+Now you can easily execute asynchronous functions one after another - just as if you were writing (blocking) synchronous code.
+
+Note that ```async/await``` did not make it into the official ES6 spec. It is however part of ES7.
+
+```javascript
+// 'await' can only be used inside of 'async' functions
+const asyncFunctionName = async () => {
+    const resultA = await firstAsyncCall();
+    const resultB = await secondAsyncCall(resultA);
+    return doSomethingWith(resultB);
+};
+
+// 'async' functions return promises (https://www.promisejs.org/)
+asyncFunctionName().then((value) => {
+  // Statements go here
+})
+```
+
+For more information, see [this lovely in-depth guide](https://github.com/yortus/asyncawait) and the [```async/await``` draft](https://tc39.github.io/ecmascript-asyncawait/).
 
 ## Special features
 
@@ -486,7 +519,7 @@ This is a template literal.
 
 ### Destructuring assignments
 JavaScript enables you to use destructuring patterns in variable assigments and function parameters.
-For more information take a look at the [Mozilla JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+For more information, take a look at the [Mozilla JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 
 #### Arrays
 ```javascript
@@ -576,25 +609,3 @@ const { key3, ...objectName3 } = objectName2;
 console.log(key3); // 'value3'
 console.log(objectName3); // { key: 'value', key2: 'value2' };
 ```
-
-### Async/await
-Before ```async/await``` (and Promises) JavaScript suffered from something called the ["callback hell"](http://callbackhell.com/) (big time!).  
-Now you can easily execute asynchronous functions one after another - just as if you were writing (blocking) synchronous code.
-
-Note that ```async/await``` did not make it into the official ES6 spec. It is however part of ES7.
-
-```javascript
-// 'await' can only be used inside of 'async' functions
-const asyncFunctionName = async () => {
-    const resultA = await firstAsyncCall();
-    const resultB = await secondAsyncCall(resultA);
-    return doSomethingWith(resultB);
-};
-
-// 'async' functions return promises (https://www.promisejs.org/)
-asyncFunctionName().then((value) => {
-  // Statements go here
-})
-```
-
-For more information, see [this lovely in-depth guide](https://github.com/yortus/asyncawait) and the [```async/await``` draft](https://tc39.github.io/ecmascript-asyncawait/).
