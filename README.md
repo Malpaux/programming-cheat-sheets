@@ -5,6 +5,7 @@ They aim to provide a structured overview of the core language features and an i
 ## Cheat-sheets
 - [Go](golang.md)
 - [JavaScript (ES6)](javascript.md)
+- [Rust](rust.md)
 
 ## Contributing
 Any help towards completing these cheat-sheets is highly appreciated!
