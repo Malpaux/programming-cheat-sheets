@@ -47,6 +47,10 @@ fn main() {
 - Do use semicolons for statements (not for expressions)
 - Chars can be denoted using ``` '' ```
 - Strings can be denoted using ``` "" ```
+- Number literals:
+  - Can include underscores for better readability (r.g. ```1_000 = 1000```)
+  - Can be denoted in decimal (no prefix), hexadecimal (prepend ```0x```), octal (prepend ```0o```), or binary (prepend ```0b```) form
+  - Can be explicitly typed by using the type (see Data types/Primitives) as suffix (e.g. ```1u32```)
 - Underscores (``` _ ```) can be used as placeholders for unused values (TODO: ?)
 
 - Default main file: ```main.rs``` (executable projects) or ```lib.rs``` (libraries)
@@ -61,7 +65,11 @@ fn main() {
 // Multi
 // line
 
-/* TODO **/
+/* Block
+comment */
+
+/// Doc comment for the following item
+//! Doc comment for the enclosing item
 ```
 
 ### Variables
@@ -178,6 +186,7 @@ match value {
   comparedValue2 => {
     // Statements go here
   },
+  _ => /* Statement goes here */, // Rust's match has to be exhaustive. An underscore (_) acts as a catch-all
 }
 
 // Match (using patterns)
@@ -221,7 +230,18 @@ Stop a loop using ```break;```, skip an iteration using ```continue;```.
 ### Data Structures
 
 #### Tuples
-Use arrays.
+In Rust tuples can be constructed using parenthesis (```()```). They themselves are values with the type signature ```(T1, T2, ...)```.
+
+```rust
+// Declare tuple
+let tupleName: (i32, bool) = (0, false);
+
+// Types can be inferred
+let tupleName = (0, false);
+
+// Deconstructive assignment
+let (value, value2) = tupleName; // value/value2 now hold the tuple's first/second value
+```
 
 #### Arrays
 Rust's arrays are statically-sized.
@@ -391,7 +411,7 @@ mod moduleName {
   mod subModule {}
 }
 
-mod moduleName; // Look for module implementation in 'name.rs' & 'name/mod.rs', declare here
+mod moduleName; // Look for module implementation in 'moduleName.rs' & 'moduleName/mod.rs', declare here
 
 // Export: prepend 'pub' keyword
 mod moduleName {
