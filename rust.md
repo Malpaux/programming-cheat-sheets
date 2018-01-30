@@ -56,7 +56,7 @@ fn main() {
 - Default main file: ```main.rs``` (executable projects) or ```lib.rs``` (libraries)
 - ```main``` function is called on execution
 
-- Do use ```snake case``` (```snake_case```)
+- Do use *snake case* (```snake_case```)
 
 ### Comments
 ```rust

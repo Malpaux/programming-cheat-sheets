@@ -78,7 +78,7 @@ console.log('Hello, world!');
 - Strings can be denoted using ``` 'string' ```,  ``` "string" ``` or ``` `string` ```
 - Value equality (w/o type coercion) is checked with ```===```
 
-- Naming convention: Do use ```camel case``` (```mixedCaps```/```MixedCaps```)
+- Naming convention: Do use *camel case* (```mixedCaps```/```MixedCaps```)
 
 ### Comments
 ```javascript

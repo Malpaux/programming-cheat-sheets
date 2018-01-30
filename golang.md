@@ -50,7 +50,7 @@ func main() {
 
 - ```main``` function (from ```main``` package) is called on execution
 
-- Do use ```camel case``` (```mixedCaps```/```MixedCaps```)
+- Do use *camel case* (```mixedCaps```/```MixedCaps```)
 
 ### Comments
 ```go
@@ -128,7 +128,7 @@ TODO
 
 ### Functions
 ```go
-// Function declarations
+// Function declaration
 func functionName(param int, param2 int) int {
   // Statements go here
   return param2
@@ -306,9 +306,9 @@ type StructTypeName {
   key, key2 int
 }
 
-// Create new struct
+// Create & initialize new struct
 structName := StructTypeName{0, 1}
-structName := StructTypeName{key2: 0} // key: 0 is implicitly
+structName := StructTypeName{key2: 0} // implies 'key: 0'
 // Anonymous struct type
 structName := struct {key, key2 int}{0, 1}
 
