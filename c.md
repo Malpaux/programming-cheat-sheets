@@ -89,8 +89,42 @@ int length = strlen(stringName);
 #### Interfaces
 ANSI C does not have Interfaces
 
+#### Unions
+A union is a special C data type that allows you to store different data types in the same memory location.
+```c
+// Overall syntax is similar to structs (see Data Structures -> Structs)
+
+// Defining a union
+union UnionTypeName {
+  int intVariableName;
+  float floatVariableName;
+  char stringVariableName[10];
+}
+
+// Create new union variable
+union UnionTypeName unionName;
+unionName.intVariableName = 0; // 'unionName.intVariableName' is now set to 0
+unionName.floatVariableName = 0.0; // 'unionName.floatVariableName' is now set to 0.0, value of 'unionName.intVariableName' may get corrupted
+```
+
 #### Null
 - ```NULL```
+
+#### Custom types
+C has the ```typedef``` keyword that allows you to give a data type a new name.
+
+```c
+typedef unsigned char BYTE;
+
+BYTE variableName;
+
+// Also works with user defined data types (e.g. structs, see Data Structures -> Structs)
+typedef struct {
+  int member;
+} TypeName;
+
+TypeName variableName;
+```
 
 #### Type checks
 TODO
@@ -245,6 +279,14 @@ int value = structPointerName->key;
 structPointerName->key = value;
 ```
 
+Inside of a structure, *bit fields* can be used to define a variable's memory width:
+```c
+struct {
+  unsigned int key : 1; // Variable has a width of 1 bit
+  unsigned int key2 : 2; // Variable has a width of 1 bit
+} structName;
+```
+
 #### Maps
 Use structs.
 
@@ -252,7 +294,7 @@ Use structs.
 ANSI C is not an object oriented programming language. Thus it does not have a classes.
 
 ### Memory management
-TODO
+TODO: malloc, free, sizeof, ...
 
 #### Pointers & references
 TODO
