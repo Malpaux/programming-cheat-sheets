@@ -66,6 +66,9 @@ C is statically typed.
 In C strings are one-dimensional arrays of chars terminated by a *null* character (```\0```).
 
 ```c
+// Declare & set static string
+char *stringName = "str";
+
 // Declare & initialize string (manually)
 char stringName[4] = {'s', 't', 'r', '\0'};
 
@@ -297,7 +300,18 @@ ANSI C is not an object oriented programming language. Thus it does not have a c
 TODO: malloc, free, sizeof, ...
 
 #### Pointers & references
-TODO
+```c
+int *pointerName;
+
+// Create pointer
+pointerName = &variableName;
+
+// Access pointer's underlying value
+value = *pointerName;
+
+// Mutate pointer's underlying value
+*pointerName = value;
+```
 
 ### Modules
 C has header files (```**/*.h```) that contain shared C function declarations and macros definitions.  

@@ -374,21 +374,13 @@ The ```*``` sign can be used to access a reference's value (dereferencing).
 
 TODO: Example code
 
-```go
-var pointerName *int // Pointer
-var variableName int
-
+```rust
 // Create pointer
-pointerName = &variableName2
 
 // Access pointer's underlying value
-value := *pointerName
 
 // Mutate pointer's underlying value
-*pointerName = value
 ```
-
-Note: Out of convenience, writing ```(*structName).key2``` is equivalent to ```structName.key1```.
 
 ### Modules
 Rust's modules are independent namespaces that can selectively expose a part of their members to the outside world.
