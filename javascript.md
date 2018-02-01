@@ -431,7 +431,7 @@ instanceName.methodName(0, 1) // returns 2
 JavaScript is garbage collected. Manual memory management is neither required nor possible.
 
 #### Pointers & references
-All JavaScript objects (that includes Arrays) are passed around as references.  
+All JavaScript objects (that includes Arrays) are passed by reference.  
 This happens automatically and requires no explicit pointer/reference notation.
 
 ### Modules

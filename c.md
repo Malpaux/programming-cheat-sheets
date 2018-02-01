@@ -3,7 +3,7 @@ C is a (probably *the*) low-level systems programming language.
 
 - File extension: ```**/*.c```
 
-## Hello World
+## Hello world
 ```c
 #include <stdio.h>
 
@@ -16,7 +16,7 @@ int main() {
 ## Basics
 - Do use semicolons
 - Chars can be denoted using ``` '' ```
-- Strings are denoted using ``` "string" ```
+- Strings can be denoted using ``` "string" ```
 
 - Naming convention: Do use *camel case* (```mixedCaps```/```MixedCaps```)
 
@@ -218,6 +218,8 @@ for (int count = 0; count < 10; count++) {
 }
 ```
 
+Stop a loop using ```break;```, skip an iteration using ```continue;```.
+
 ### Data Structures
 
 #### Tuples
@@ -314,7 +316,7 @@ value = *pointerName;
 ```
 
 ### Modules
-C has header files (```**/*.h```) that contain shared C function declarations and macros definitions.  
+C has header files (```**/*.h```) that contain shared C function declarations and macro definitions.  
 Generally two types of header files are discerned: Those the programmer writes himself, and those that ship with the compiler.
 Both can be imported using their respective version of the ```#include``` preprocessing directive.
 

@@ -167,7 +167,7 @@ if condition {
 ```
 
 #### Conditional expression
-In Rust, you can use the ```if/else``` construct in place of ```?:``` ternary operator:
+In Rust, you can use the ```if/else``` construct in place of the ```?:``` ternary operator:
 
 ```rust
 let value = if condition { conditionAppliesValue } else { conditionDoesNotApplyValue };
@@ -230,7 +230,7 @@ Stop a loop using ```break;```, skip an iteration using ```continue;```.
 ### Data Structures
 
 #### Tuples
-In Rust tuples can be constructed using parenthesis (```()```). They themselves are values with the type signature ```(T1, T2, ...)```.
+In Rust tuples can be constructed using parentheses (```()```). They are values with the type signature ```(T1, T2, ...)```.
 
 ```rust
 // Declare tuple
@@ -264,31 +264,6 @@ arrayName[index] = value;
 #### Array slices
 TODO
 
-Go's array slices can be thought of as dynamically-sized views into arrays.
-
-```go
-// Create slice from array
-var sliceName []int = arrayName[0:1] // Slice including the first element of array 'arrayName'
-var sliceName []int = arrayName[0:4] // Slice including all elements of array 'arrayName'
-var sliceName []int = arrayName[:4] // Slice including all elements of array 'arrayName'
-var sliceName []int = arrayName[0:] // Slice including all elements of array 'arrayName'
-var sliceName []int = arrayName[:] // Slice including all elements of array 'arrayName'
-
-// Slice literals
-sliceName := []int{0, 1, 2, 3}
-
-// Create slice with 'make'
-sliceName := make([]int, 4) // length = 4, capacity = 4
-sliceName := make([]int, 0, 4) // length = 0, capacity = 4
-
-// Get slice length and capacity
-length := len(sliceName) // Number of elements in the slice
-capacity := cap(sliceName) // Number of elements in the underlying array, counting from lower slice bound
-
-// Append to slice
-append(sliceName, sliceName2/*, sliceName3, sliceNameN*/)
-```
-
 #### Generic Objects
 Use maps or structs.
 
@@ -318,26 +293,6 @@ structName.key2 = value;
 
 #### Maps
 TODO
-
-```go
-// Create new map
-var mapName map[string]int
-mapName := make(map[string]int)
-mapName := map[string]int{
-  "key": 0,
-  "key2": 1,
-}
-
-// Access map value
-value := mapName["key2"]
-value, exists := mapName["key2"] // Check if key exists in map
-
-// Mutate map value
-mapName["key2"] = value
-
-// Delete map key
-delete(mapName, "key2")
-```
 
 ### Classes/methods
 TODO
