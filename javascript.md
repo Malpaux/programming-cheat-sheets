@@ -75,10 +75,10 @@ console.log('Hello, world!');
 
 ## Basics
 - Do use semicolons (technically they are optional in most places - huge debates about whether you should use them here can be had)
-- Strings can be denoted using ``` '<string>' ```,  ``` "<tring>" ``` or ``` `<string>` ```
+- Strings can be denoted using ``` 'string' ```,  ``` "string" ``` or ``` `string` ```
 - Value equality (w/o type coercion) is checked with ```===```
 
-- Naming convention: Do use ```camel case``` (```mixedCaps```/```MixedCaps```)
+- Naming convention: Do use *camel case* (```mixedCaps```/```MixedCaps```)
 
 ### Comments
 ```javascript

@@ -61,7 +61,7 @@ func main() {
 
 - ```main``` function (from ```main``` package) is called on execution
 
-- Do use ```camel case``` (```mixedCaps```/```MixedCaps```)
+- Do use *camel case* (```mixedCaps```/```MixedCaps```)
 
 ### Comments
 ```go
@@ -120,7 +120,16 @@ Go's strings are treated like primitives.
 Go does not have generics.
 
 #### Interfaces
-TODO
+In Go an interface defines a set of method signatures.  
+Any value that implements these methods will be accepted.
+
+```go
+type InterfaceName interface {
+  MethodName() int
+}
+```
+
+The empty interface (```interface{}```) may hold values of any type.
 
 #### Null
 - ```nil```
@@ -130,7 +139,7 @@ TODO
 
 ### Functions
 ```go
-// Function declarations
+// Function declaration
 func functionName(param int, param2 int) int {
   // Statements go here
   return param2
@@ -308,9 +317,9 @@ type StructTypeName {
   key, key2 int
 }
 
-// Create new struct
+// Create & initialize new struct
 structName := StructTypeName{0, 1}
-structName := StructTypeName{key2: 0} // key: 0 is implicitly
+structName := StructTypeName{key2: 0} // implies 'key: 0'
 // Anonymous struct type
 structName := struct {key, key2 int}{0, 1}
 
@@ -420,10 +429,38 @@ package name
 ### Concurrency
 
 #### Goroutines
-TODO
+Goroutines are lightweight threads.
 
-#### Pipelines
-TODO
+You can start a new goroutine with the ```go``` keyword:
+```go
+go functionName()
+```
+
+#### Channels
+Go's channels enable easy synchronization and communication between goroutines.  
+They are a ["typed conduit"](https://tour.golang.org/concurrency/2) through which values can be sent and received.
+
+Channels can be buffered (but don't have to).
+Sending to a buffered channel blocks if the buffer is full.
+Reading from one blocks if it is empty.
+
+```go
+// Create a new (unbuffered) channel
+channelName := make(chan int)
+
+// Create a new buffered channel
+channelName := make(chan int, 100) // Second argument is the buffer length
+
+// Send to channel
+channelName <- value
+
+// Receive from channel
+value := <-channelName
+```
+
+##### Select
+
+#### Mutexes
 
 ## Special features
 
