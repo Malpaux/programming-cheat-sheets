@@ -3,12 +3,12 @@ Rust ([rust-lang.org](https://www.rust-lang.org/en-US/)) is a statically typed s
 
 - File extensions: ```**/*.rs```, ```**/*.rc``` (deprecated)
 
-## Get Started
+## Get started
 
 ### [Setup](https://www.rust-lang.org/en-US/install.html)
 
 ### REPL
-TODO
+Rust does not natively provide you with a REPL. 3rd party solutions are experimented on (e.g. [Rusti](https://github.com/murarth/rusti)).
 
 ### Compile
 ```shell
@@ -33,10 +33,10 @@ TODO
 ### Package management
 TODO
 
-### Testing & Linting
+### Testing & linting
 TODO
 
-## Hello World
+## Hello world
 ```rust
 fn main() {
   println!("Hello, world!");

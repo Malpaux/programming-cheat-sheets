@@ -9,7 +9,7 @@ Java script is a dynamically typed, garbage collected interpreter language predo
   - [```package.json```](https://docs.npmjs.com/files/package.json)
   - ```yarn.lock``` (when using [Yarn](https://yarnpkg.com/en/) as your package manager)
 
-## Get Started
+## Get started
 This guide focuses on setting up and working with *node.js*
 
 ### Setup
@@ -56,7 +56,7 @@ Installed packages can be removed using
 - ```npm uninstall --save <package> <package2> <packageN>```
 - or ```yarn remove <package> <package2> <packageN>```
 
-### Testing & Linting
+### Testing & linting
 A variety of different unit testing & linting solutions for JS exist.
 
 Popular choices for testing include
@@ -68,7 +68,7 @@ Popular choices for testing include
 
 For linting [ESLint](http://eslint.org/) generally is advisable.
 
-## Hello World
+## Hello world
 ```javascript
 console.log('Hello, world!');
 ```

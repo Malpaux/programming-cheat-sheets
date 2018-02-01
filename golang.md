@@ -3,12 +3,12 @@ Go ([golang.org](https://golang.org/)) is a statically typed, garbage collected 
 
 - File extension: ```**/*.go```
 
-## Get Started
+## Get started
 
 ### [Setup](https://golang.org/doc/install)
 
 ### REPL
-Go does not natively provide you with a REPL. 3rd party solutions exit (e.g. [gore](https://github.com/motemen/gore)).
+Go does not natively provide you with a REPL. 3rd party solutions exist (e.g. [gore](https://github.com/motemen/gore)).
 
 ### Compile
 ```shell
@@ -20,18 +20,29 @@ This outputs an executable.
 - Ignored test files: ```**/*_test.go```
 
 ## Tooling
-TODO
+Go comes with the ["Go" tool](https://golang.org/cmd/go/) for managing your source code.
 
 ### Project creation
 TODO
 
 ### Package management
-TODO
+Package management is a topic the Go community has not yet found common ground in.
+https://nathany.com/go-packages/
+https://github.com/kardianos/govendor
 
-### Testing & Linting
-TODO
+https://brandur.org/golang-packages
+https://github.com/golang/go/wiki/PackageManagementTools
 
-## Hello World
+### Testing & linting
+The [```testing``` package](https://golang.org/pkg/testing/) provides support for automated testing and benchmarking of Go packages.
+
+You can execute tests using the ```go test``` command.  
+If you want to execute benchmarks as well, run ```go test -bench=.```.
+
+For basic linting you can use [Golint](https://github.com/golang/lint).  
+If you need a more sophisticated static code checking solution, give [Go Meta Linter](https://github.com/alecthomas/gometalinter) a shot.
+
+## Hello world
 ```go
 package main
 
