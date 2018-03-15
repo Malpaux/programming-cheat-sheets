@@ -530,10 +530,10 @@ console.log(value); // 0
 console.log(value2); // 1
 
 // Default values (+ skip first two values)
-const [,, value03 = 4] = arrayName;
+const [,, value3 = 4] = arrayName;
 
-console.log(value01); // 0
-console.log(value02); // 1
+console.log(value); // 0
+console.log(value2); // 1
 console.log(value3); // 4
 
 // Example: swap
